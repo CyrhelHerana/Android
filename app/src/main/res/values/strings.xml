@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="button1">SEND</string>
+    <string name="app_name">hello Andriod</string>
+    <string name="buttonmain">SEND</string>
 </resources>
