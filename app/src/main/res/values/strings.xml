@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">hello Andriod</string>
     <string name="buttonmain">SEND</string>
+    <string-array name="character">
+        <item>SAMSA</item>
+        <item>CABURNAY</item>
+        <item>HERANA</item>
+        <item>DINOY</item>
+        <item>LIGAN</item>
+        <item>MUSNGI</item>
+        <item>RICABLANCA</item>
+        <item>CABEDO</item>
+    </string-array>
 </resources>
