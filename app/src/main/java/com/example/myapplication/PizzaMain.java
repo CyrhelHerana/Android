@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-public class PizzaMain extends AppCompatActivity  implements PizzaMenu.OnItemSelectedListener {
+public class PizzaMain extends AppCompatActivity implements PizzaMenu.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,8 @@ public class PizzaMain extends AppCompatActivity  implements PizzaMenu.OnItemSel
         Log.d("DEBUG", getResources().getConfiguration().orientation + "");
 
         if (savedInstanceState == null) {
-            // Instance of first fragment
             PizzaMenu firstFragment = new PizzaMenu();
 
-            // Add Fragment to FrameLayout (flContainer), using FragmentManager
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.flContainer, firstFragment);
             ft.commit();
@@ -43,7 +41,6 @@ public class PizzaMain extends AppCompatActivity  implements PizzaMenu.OnItemSel
     public void onPizzaItemSelected(int position) {
         Toast.makeText(this, "Called By Fragment A: position - "+ position, Toast.LENGTH_SHORT).show();
 
-        // Load Pizza Detail Fragment
         PizzaDetails secondFragment = new PizzaDetails();
 
         Bundle args = new Bundle();
@@ -55,9 +52,10 @@ public class PizzaMain extends AppCompatActivity  implements PizzaMenu.OnItemSel
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.flContainer2, secondFragment)
-                    //.addToBackStack(null)
                     .commit();
-        }else{
+        }
+        else
+        {
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.flContainer, secondFragment)
